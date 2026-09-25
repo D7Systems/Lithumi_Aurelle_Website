@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURELLE ✦ Handcrafted Luxury Accessories & Bags</title>
+  <meta name="description" content="Aurelle - Handcrafted pearl bags, evening purses, embroidered pouches and artisan jewellery designed to be a part of your most beautiful moments.">
+  <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <span>Free shipping on orders over $100</span>
+    <span class="star">✦</span>
+    <span>Handcrafted with love</span>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <!-- Brand Identity -->
+        <a href="#home" class="brand">
+          <img src="assets/logo.jpg" alt="Aurelle Emblem" class="brand-emblem">
+          <span class="brand-text">Aurelle <span class="brand-sparkle">✦</span></span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#catalog" class="nav-link">Shop</a></li>
+          <li><a href="#categories" class="nav-link">Categories</a></li>
+          <li><a href="#custom-order" class="nav-link">Bespoke Orders</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <!-- Upload Item Action -->
+          <button class="btn-upload-nav js-open-upload" title="Upload a new item with price & contact number">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            <span>+ Upload Item</span>
+          </button>
+
+          <!-- Search Toggle -->
+          <button class="header-icon-btn" id="search-toggle-btn" aria-label="Search Collection" title="Search">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <!-- Wishlist Badge -->
+          <button class="header-icon-btn" id="wishlist-btn" aria-label="Wishlist" title="Saved Items">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span class="header-badge" id="wishlist-count">0</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Collapsible Search Bar -->
+    <div id="search-bar-container" style="display: none; padding: 12px 24px; background: #F8F4EE; border-top: 1px solid var(--border-light);">
+      <div class="container">
+        <input type="text" id="search-input" class="form-input" placeholder="Search by name, category, or price (e.g. Eden Bag, Pouch, $95)...">
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section (Matches FORMAT.jpeg) -->
+  <section class="hero-section" id="home">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="hero-eyebrow">Timeless Elegance</span>
+        <h1 class="hero-title">More Than<br>Just Accessories</h1>
+        <p class="hero-description">
+          Handcrafted pieces designed to be a part of your most beautiful moments. From lustrous pearl evening bags to heirloom jewelry.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#catalog" class="btn-primary">
+            Shop Now →
+          </a>
+          <button class="btn-secondary js-open-upload">
+            + Upload Item
+          </button>
+        </div>
+
+        <div class="hero-indicators">
+          <div class="indicator-bar"></div>
+          <div class="indicator-dot"></div>
+          <div class="indicator-dot"></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-image-wrapper">
+          <img src="assets/hero_bag.jpg" alt="Aurelle Handcrafted Pearl Bag Collection" class="hero-img">
+          <div class="hero-floating-badge">
+            <span class="badge-sparkle">✦</span>
+            <div>
+              <div class="badge-text-title">Artisanal Atelier</div>
+              <div class="badge-text-subtitle">100% Hand-Woven Pearls</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Showcase (Matches FORMAT.jpeg) -->
+  <section class="categories-section" id="categories">
+    <div class="container">
+      <div class="categories-grid">
+        <!-- Bags -->
+        <div class="category-card" data-category="bags">
+          <div class="category-thumb-wrapper">
+            <img src="assets/eden_bag.jpg" alt="Bags" class="category-thumb">
+          </div>
+          <div class="category-name">Bags</div>
+          <div class="category-arrow">→</div>
+        </div>
+
+        <!-- Purses -->
+        <div class="category-card" data-category="purses">
+          <div class="category-thumb-wrapper">
+            <img src="assets/midnight_purse.jpg" alt="Purses" class="category-thumb">
+          </div>
+          <div class="category-name">Purses</div>
+          <div class="category-arrow">→</div>
+        </div>
+
+        <!-- Pouches -->
+        <div class="category-card" data-category="pouches">
+          <div class="category-thumb-wrapper">
+            <img src="assets/daisy_pouch.jpg" alt="Pouches" class="category-thumb">
+          </div>
+          <div class="category-name">Pouches</div>
+          <div class="category-arrow">→</div>
+        </div>
+
+        <!-- Jewellery -->
+        <div class="category-card" data-category="jewellery">
+          <div class="category-thumb-wrapper">
+            <img src="assets/lumiere_bracelet.jpg" alt="Jewellery" class="category-thumb">
+          </div>
+          <div class="category-name">Jewellery</div>
+          <div class="category-arrow">→</div>
+        </div>
+
+        <!-- Gift Sets -->
+        <div class="category-card" data-category="giftsets">
+          <div class="category-thumb-wrapper">
+            <img src="assets/gift_sets.jpg" alt="Gift Sets" class="category-thumb">
+          </div>
+          <div class="category-name">Gift Sets</div>
+          <div class="category-arrow">→</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Catalog / Best Sellers (Matches FORMAT.jpeg) -->
+  <section class="products-section" id="catalog">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Best Sellers</h2>
+        </div>
+
+        <div class="section-actions">
+          <div class="filter-btn-group">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="bags">Bags</button>
+            <button class="filter-btn" data-category="purses">Purses</button>
+            <button class="filter-btn" data-category="pouches">Pouches</button>
+            <button class="filter-btn" data-category="jewellery">Jewellery</button>
+            <button class="filter-btn" data-category="giftsets">Gift Sets</button>
+            <button class="filter-btn" data-category="user-items">User Uploaded</button>
+          </div>
+
+          <a href="#catalog" class="view-all-link" onclick="window.aurelle.activeCategory='all'; window.aurelle.renderCatalog();">View All →</a>
+        </div>
+      </div>
+
+      <!-- Products Grid (Filled dynamically via app.js) -->
+      <div class="products-grid" id="products-grid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Bespoke / Custom Order Request Section -->
+  <section class="custom-order-section" id="custom-order">
+    <div class="container">
+      <div class="custom-order-banner">
+        <div class="custom-content">
+          <h3>Bespoke Creations & Custom Commissions</h3>
+          <p>
+            Looking for a specific color palette, personalized pearl bead pattern, or bridal ensemble accessory? Share your idea with us directly or upload your preferred reference piece.
+          </p>
+          <div class="custom-features">
+            <div class="custom-feature-item">
+              <span>✦</span> Custom dimensions & straps
+            </div>
+            <div class="custom-feature-item">
+              <span>✦</span> Direct WhatsApp consultation
+            </div>
+            <div class="custom-feature-item">
+              <span>✦</span> Handcrafted in 5-7 business days
+            </div>
+          </div>
+        </div>
+
+        <div class="custom-actions">
+          <button class="btn-gold js-open-upload">
+            + Upload Item & Contact
+          </button>
+          <a href="https://wa.me/94772345678?text=Hello%20Aurelle!%20I%20would%20like%20to%20inquire%20about%20a%20custom%20order." target="_blank" class="btn-secondary" style="color: #FFFFFF; border-color: rgba(255,255,255,0.4);">
+            Chat on WhatsApp →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust & Service Highlights (Matches FORMAT.jpeg bottom banner) -->
+  <section class="trust-banner">
+    <div class="container">
+      <div class="trust-grid">
+        <!-- Free Shipping -->
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13"></rect>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+          </div>
+          <div>
+            <div class="trust-text-title">Free Shipping</div>
+            <div class="trust-text-subtitle">On orders over $100</div>
+          </div>
+        </div>
+
+        <!-- Handcrafted -->
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </div>
+          <div>
+            <div class="trust-text-title">Handcrafted</div>
+            <div class="trust-text-subtitle">With premium materials</div>
+          </div>
+        </div>
+
+        <!-- Secure Payments -->
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <polyline points="9 12 11 14 15 10"></polyline>
+            </svg>
+          </div>
+          <div>
+            <div class="trust-text-title">Secure Orders</div>
+            <div class="trust-text-subtitle">Direct artisan communication</div>
+          </div>
+        </div>
+
+        <!-- Script Quote -->
+        <div class="trust-quote">
+          <span>Small details make a big difference</span>
+          <span class="trust-quote-star">✦</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="about">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Info -->
+        <div>
+          <div class="footer-brand-title">AURELLE ✦</div>
+          <p class="footer-brand-desc">
+            Carry a little more radiance. Dedicated to preserving the intricate craft of pearl weaving and artisanal luxury accessories.
+          </p>
+          <div class="footer-contact-details" id="contact">
+            <div>Order Inquiries: <a href="tel:+94772345678">+94 77 234 5678</a></div>
+            <div>WhatsApp: <a href="https://wa.me/94772345678" target="_blank">+94 77 234 5678</a></div>
+            <div>Atelier: Colombo & Worldwide Shipping</div>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <div class="footer-heading">Collections</div>
+          <ul class="footer-links">
+            <li><a href="#catalog" onclick="window.aurelle.activeCategory='bags'; window.aurelle.renderCatalog();">Beaded Bags</a></li>
+            <li><a href="#catalog" onclick="window.aurelle.activeCategory='purses'; window.aurelle.renderCatalog();">Evening Purses</a></li>
+            <li><a href="#catalog" onclick="window.aurelle.activeCategory='pouches'; window.aurelle.renderCatalog();">Silk Pouches</a></li>
+            <li><a href="#catalog" onclick="window.aurelle.activeCategory='jewellery'; window.aurelle.renderCatalog();">Pearl Jewellery</a></li>
+            <li><a href="#catalog" onclick="window.aurelle.activeCategory='giftsets'; window.aurelle.renderCatalog();">Curated Gift Sets</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Care -->
+        <div>
+          <div class="footer-heading">Customer Care</div>
+          <ul class="footer-links">
+            <li><a href="#custom-order">Custom Orders</a></li>
+            <li><a href="#contact">Order Tracking</a></li>
+            <li><a href="#about">Artisan Care Guide</a></li>
+            <li><a href="#contact">Shipping & Returns</a></li>
+            <li><a href="#" class="js-open-upload">+ Upload New Piece</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-newsletter">
+          <div class="footer-heading">Stay Connected</div>
+          <p>Subscribe to receive preview access to limited seasonal capsule drops.</p>
+          <form class="newsletter-form" id="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Your email address" required>
+            <button type="submit" class="newsletter-btn">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Aurelle Atelier. All rights reserved. Carry a little more radiance.</div>
+        <div style="display: flex; gap: 18px;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Artisan Guarantee</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL 1: UPLOAD ITEM MODAL (Picture, Price, Contact Number)
+       ========================================================================== -->
+  <div class="modal-backdrop" id="upload-modal" role="dialog" aria-modal="true" aria-labelledby="upload-modal-title">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 class="modal-header-title" id="upload-modal-title">Upload New Item</h3>
+        <button class="btn-close-modal" id="close-upload-modal" aria-label="Close modal">✕</button>
+      </div>
+
+      <form id="upload-item-form">
+        <div class="modal-body">
+          <!-- Image Dropzone -->
+          <div class="upload-dropzone" id="dropzone">
+            <svg class="dropzone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <circle cx="8.5" cy="8.5" r="1.5"></circle>
+              <polyline points="21 15 16 10 5 21"></polyline>
+            </svg>
+            <div class="dropzone-text">Click or drag & drop item picture here</div>
+            <div class="dropzone-subtext">Supports JPG, PNG, WEBP high-resolution photography</div>
+            <input type="file" id="item-image-file" accept="image/*" style="display: none;">
+          </div>
+
+          <!-- Preview Area -->
+          <div class="image-preview-box" id="image-preview-box">
+            <img src="" id="preview-image" alt="Uploaded Preview">
+            <button type="button" class="btn-remove-preview" id="btn-remove-preview" title="Remove picture">✕</button>
+          </div>
+
+          <!-- Item Name -->
+          <div class="form-group">
+            <label class="form-label" for="item-title">Item Name *</label>
+            <input type="text" id="item-title" class="form-input" placeholder="e.g. Celestial Pearl Clutch" required>
+          </div>
+
+          <!-- Category & Price -->
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="item-category">Category *</label>
+              <select id="item-category" class="form-select" required>
+                <option value="bags">Bags</option>
+                <option value="purses">Purses</option>
+                <option value="pouches">Pouches</option>
+                <option value="jewellery">Jewellery</option>
+                <option value="giftsets">Gift Sets</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="item-price">Price ($ USD) *</label>
+              <input type="number" step="0.01" min="1" id="item-price" class="form-input" placeholder="e.g. 110.00" required>
+            </div>
+          </div>
+
+          <!-- Contact Number -->
+          <div class="form-group">
+            <label class="form-label" for="item-contact">Order Contact Number (WhatsApp / Mobile) *</label>
+            <input type="tel" id="item-contact" class="form-input" placeholder="e.g. +94 77 123 4567 or +1 (555) 019-2834" required>
+            <small style="color: var(--text-muted); font-size: 0.76rem; display: block; margin-top: 4px;">
+              Customers will see this number and be able to directly order or chat on WhatsApp.
+            </small>
+          </div>
+
+          <!-- Item Description -->
+          <div class="form-group">
+            <label class="form-label" for="item-description">Description / Craftsmanship Details</label>
+            <textarea id="item-description" class="form-textarea" rows="3" placeholder="Briefly describe the materials, beading, strap, or sizing..."></textarea>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-secondary" id="cancel-upload-btn" style="padding: 11px 20px;">Cancel</button>
+          <button type="submit" class="btn-primary" style="padding: 11px 26px;">Publish Item →</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 2: ORDER & INQUIRY MODAL (Direct WhatsApp & Contact)
+       ========================================================================== -->
+  <div class="modal-backdrop" id="order-modal" role="dialog" aria-modal="true" aria-labelledby="order-modal-heading">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 class="modal-header-title" id="order-modal-heading">Order Handcrafted Piece</h3>
+        <button class="btn-close-modal" id="close-order-modal" aria-label="Close modal">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Product Summary -->
+        <div class="order-product-summary">
+          <img src="" id="order-modal-thumb" alt="Product Thumbnail" class="order-product-thumb">
+          <div class="order-summary-details">
+            <h4 id="order-modal-title">Product Name</h4>
+            <div class="order-summary-price" id="order-modal-price">$0.00</div>
+          </div>
+        </div>
+
+        <!-- Quick Direct Contact Channels -->
+        <div style="margin-bottom: 8px;">
+          <div class="form-label">Instant Artisan Contact:</div>
+        </div>
+        <div class="order-quick-channels">
+          <a href="#" id="btn-order-whatsapp-direct" class="channel-btn channel-btn-whatsapp" target="_blank">
+            <svg viewBox="0 0 24 24">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.19.53-1.06 1.04-1.47 1.08-.38.03-.89.06-2.88-.72-1.7-.67-2.8-2.4-2.88-2.52-.08-.11-.69-.92-.69-1.75 0-.83.43-1.24.58-1.41.16-.17.35-.22.46-.22.12 0 .24 0 .34.01.11.01.26-.04.41.31.15.36.52 1.27.57 1.36.05.1.08.21.01.33-.06.12-.1.2-.2.31-.1.11-.21.25-.3.33-.1.1-.21.21-.09.41.12.21.54.89 1.16 1.44.8.71 1.47.93 1.68 1.04.21.1.33.09.45-.05.12-.14.52-.61.66-.82.14-.21.28-.18.47-.11.19.07 1.21.57 1.42.67.21.1.35.15.4.24.05.09.05.52-.14 1.05z"/>
+            </svg>
+            Order on WhatsApp
+          </a>
+
+          <a href="#" id="btn-order-call-direct" class="channel-btn channel-btn-phone">
+            <svg viewBox="0 0 24 24">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+            <span id="order-modal-contact-number">Call Order Line</span>
+          </a>
+        </div>
+
+        <div style="text-align: center; margin: 16px 0; position: relative;">
+          <span style="background: white; padding: 0 12px; color: var(--text-muted); font-size: 0.78rem; position: relative; z-index: 2;">
+            OR FILL ORDER DETAILS DIRECTLY
+          </span>
+          <div style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--border-light); z-index: 1;"></div>
+        </div>
+
+        <!-- Custom Order Form -->
+        <form id="order-form">
+          <div class="form-group">
+            <label class="form-label" for="customer-name">Your Full Name *</label>
+            <input type="text" id="customer-name" class="form-input" placeholder="Enter your name" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="customer-phone">Your Contact Number / WhatsApp *</label>
+            <input type="tel" id="customer-phone" class="form-input" placeholder="e.g. +94 77 987 6543" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="customer-address">Delivery Address (City / Region)</label>
+            <input type="text" id="customer-address" class="form-input" placeholder="e.g. Colombo 07, Western Province">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="customer-notes">Custom Notes (Optional)</label>
+            <textarea id="customer-notes" class="form-textarea" rows="2" placeholder="e.g. Need gift packaging with personalized ribbon..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 10px;">
+            Submit Order Request →
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Action Button for Quick Upload -->
+  <button class="fab-upload js-open-upload" title="Upload New Item with Picture & Price">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="5" x2="12" y2="19"></line>
+      <line x1="5" y1="12" x2="19" y2="12"></line>
+    </svg>
+    <span>Upload Item</span>
+  </button>
+
+  <!-- Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>
