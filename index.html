@@ -7,8 +7,8 @@
   <meta name="description" content="AVENZ - Beads that carry your story. Handcrafted pearl bags, evening purses, embroidered pouches, key tags, and artisan jewellery designed to be a part of your most beautiful moments.">
   <link rel="icon" href="assets/avenz_logo.jpg" type="image/jpeg">
 
-  <!-- Core Stylesheet -->
-  <link rel="stylesheet" href="styles.css">
+  <!-- Core Stylesheet (Cache-busted for fresh styles) -->
+  <link rel="stylesheet" href="styles.css?v=1.3">
 </head>
 <body>
 
@@ -91,9 +91,9 @@
           <a href="#catalog" class="btn-primary">
             Shop Now →
           </a>
-          <button class="btn-secondary js-open-upload">
-            + Upload Item
-          </button>
+          <a href="#custom-order" class="btn-secondary">
+            Custom Orders
+          </a>
         </div>
 
         <div class="hero-indicators">
@@ -233,9 +233,9 @@
         </div>
 
         <div class="custom-actions">
-          <button class="btn-gold js-open-upload">
-            + Upload Item & Contact
-          </button>
+          <a href="#contact" class="btn-gold">
+            Request Custom Piece →
+          </a>
           <a href="https://wa.me/94744156013?text=Hello%20AVENZ!%20I%20would%20like%20to%20inquire%20about%20a%20custom%20order." target="_blank" class="btn-secondary" style="color: #FFFFFF; border-color: rgba(255,255,255,0.4);">
             Chat on WhatsApp →
           </a>
@@ -355,7 +355,12 @@
       </div>
 
       <div class="footer-bottom">
-        <div>&copy; 2026 AVENZ Atelier. All rights reserved. Beads that carry your story.</div>
+        <div>
+          &copy; 2026 AVENZ Atelier. All rights reserved. Beads that carry your story.
+          <span class="developer-credit">
+            • Crafted with ✦ by <a href="https://github.com/D7Systems" target="_blank" rel="noopener noreferrer" class="developer-link">D7Systems</a>
+          </span>
+        </div>
         <div style="display: flex; gap: 18px;">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
@@ -522,16 +527,7 @@
     </div>
   </div>
 
-  <!-- Floating Action Button for Quick Upload -->
-  <button class="fab-upload js-open-upload" title="Upload New Item with Picture & Price">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <line x1="12" y1="5" x2="12" y2="19"></line>
-      <line x1="5" y1="12" x2="19" y2="12"></line>
-    </svg>
-    <span>Upload Item</span>
-  </button>
-
   <!-- Application Script -->
-  <script src="app.js"></script>
+  <script src="app.js?v=1.2"></script>
 </body>
 </html>

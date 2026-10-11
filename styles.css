@@ -251,11 +251,13 @@ input, textarea, select {
   background: var(--gold-gradient);
   color: #FFFFFF;
   padding: 9px 18px;
+  border: none;
   border-radius: var(--radius-pill);
   font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  cursor: pointer;
   box-shadow: 0 4px 14px rgba(197, 160, 89, 0.35);
   transition: var(--transition-smooth);
 }
@@ -771,9 +773,14 @@ input, textarea, select {
 }
 
 .product-price {
-  font-size: 1.08rem;
-  font-weight: 600;
-  color: var(--text-primary);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #B8860B; /* Warm Deep Artisan Gold / Amber for high e-commerce visibility */
+  letter-spacing: -0.01em;
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+  display: inline-flex;
+  align-items: baseline;
 }
 
 .product-contact-badge {
@@ -1183,6 +1190,26 @@ input, textarea, select {
   gap: 14px;
 }
 
+.developer-credit {
+  display: inline-block;
+  margin-left: 8px;
+  color: #8E857C;
+}
+
+.developer-link {
+  color: var(--gold-accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition-fast);
+  padding-bottom: 1px;
+  border-bottom: 1px dotted rgba(197, 160, 89, 0.5);
+}
+
+.developer-link:hover {
+  color: #FFFFFF;
+  border-bottom-color: #FFFFFF;
+}
+
 /* ==========================================================================
    MODALS: UPLOAD ITEM MODAL & ORDER INQUIRY MODAL
    ========================================================================== */
@@ -1494,31 +1521,7 @@ input, textarea, select {
   }
 }
 
-/* Floating Action Button for Quick Upload */
-.fab-upload {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background: var(--gold-gradient);
-  color: #FFFFFF;
-  border-radius: var(--radius-pill);
-  padding: 14px 24px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.84rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  box-shadow: 0 8px 24px rgba(197, 160, 89, 0.45);
-  z-index: 90;
-  transition: var(--transition-smooth);
-}
 
-.fab-upload:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 12px 30px rgba(197, 160, 89, 0.6);
-}
 
 /* ==========================================================================
    RESPONSIVE DESIGN
@@ -1616,12 +1619,5 @@ input, textarea, select {
   
   .form-row {
     grid-template-columns: 1fr;
-  }
-  
-  .fab-upload {
-    bottom: 20px;
-    right: 20px;
-    padding: 12px 18px;
-    font-size: 0.76rem;
   }
 }
