@@ -1,66 +1,111 @@
 /**
- * AURELLE - Luxury Handcrafted Accessories
+ * AVENZ - Luxury Handcrafted Accessories & Key Tags
+ * "Beads That Carry Your Story"
  * Core Interactive Application Logic
  */
 
-// Default curated products matching FORMAT.jpeg
+// Default curated products matching AVENZ brand & collections
 const DEFAULT_PRODUCTS = [
   {
-    id: 'prod-eden-bag',
-    title: 'The Eden Bag',
+    id: 'prod-avenz-bag-9000',
+    title: 'Signature Pearl Bag & Matching Cover',
     category: 'bags',
-    price: 120.00,
-    image: 'assets/eden_bag.jpg',
-    contact: '+94 77 234 5678',
-    whatsapp: '94772345678',
+    price: 9000,
+    priceFormatted: 'Rs. 9,000',
+    image: 'assets/avenz_pearl_bag_9000.jpg',
+    contact: '0744156013',
+    whatsapp: '94744156013',
     tag: 'Best Seller',
     isUserItem: false,
-    description: 'Signature architectural handbag hand-woven with luminous faux pearls and gold brass hardware clasp.'
+    description: 'Strong & durable beaded handle & strap, soft inner lining with magnetic closure. Comes with matching cover.'
   },
   {
-    id: 'prod-midnight-purse',
-    title: 'Midnight Purse',
-    category: 'purses',
-    price: 95.00,
-    image: 'assets/midnight_purse.jpg',
-    contact: '+94 77 234 5678',
-    whatsapp: '94772345678',
+    id: 'prod-avenz-bag-8000',
+    title: 'Architectural Pearl Flap Bag',
+    category: 'bags',
+    price: 8000,
+    priceFormatted: 'Rs. 8,000',
+    image: 'assets/avenz_pearl_bag_8000.jpg',
+    contact: '0744156013',
+    whatsapp: '94744156013',
     tag: 'Popular',
     isUserItem: false,
-    description: 'Glamorous evening bag hand-beaded with obsidian black pearls, accompanied by a 14k gold-plated chain.'
+    description: 'Comfortable beaded handle with detachable gold chain strap. Stylish flap with secure magnetic closure.'
+  },
+  {
+    id: 'prod-avenz-clutch-8000',
+    title: 'Luminous Pearl Evening Clutch',
+    category: 'purses',
+    price: 8000,
+    priceFormatted: 'Rs. 8,000',
+    image: 'assets/avenz_pearl_clutch_8000.jpg',
+    contact: '0744156013',
+    whatsapp: '94744156013',
+    tag: 'Handcrafted',
+    isUserItem: false,
+    description: 'Sturdy & elegant gold chain strap, premium quality beads with soft inner lining and magnetic closure.'
+  },
+  {
+    id: 'prod-butterfly-keytags-150',
+    title: 'Butterfly Key Tags (Yellow / Blue / Pink)',
+    category: 'keytags',
+    price: 150,
+    priceFormatted: 'Rs. 150 each',
+    image: 'assets/avenz_butterfly_keytags_150.jpg',
+    contact: '0744156013',
+    whatsapp: '94744156013',
+    tag: 'Trending',
+    isUserItem: false,
+    description: 'Cute & stylish butterfly design with high quality resin craftsmanship. Perfect for bags, keys & more. Carry a little sparkle everywhere.'
+  },
+  {
+    id: 'prod-blue-butterfly-keytags-200',
+    title: 'Sparkle Blue Butterfly Key Tags (Blue 1, 2, 3)',
+    category: 'keytags',
+    price: 200,
+    priceFormatted: 'Rs. 200 each',
+    image: 'assets/avenz_blue_butterfly_keytags_200.jpg',
+    contact: '0744156013',
+    whatsapp: '94744156013',
+    tag: 'New Drop',
+    isUserItem: false,
+    description: 'High quality glitter resin blue butterfly key tag with delicate mini butterfly charm. Perfect accessory for bags and keys.'
   },
   {
     id: 'prod-daisy-pouch',
-    title: 'Daisy Pouch',
+    title: 'Daisy Embroidered Pouch',
     category: 'pouches',
-    price: 45.00,
+    price: 3500,
+    priceFormatted: 'Rs. 3,500',
     image: 'assets/daisy_pouch.jpg',
-    contact: '+94 77 234 5678',
-    whatsapp: '94772345678',
-    tag: 'Trending',
+    contact: '0744156013',
+    whatsapp: '94744156013',
+    tag: 'Artisan',
     isUserItem: false,
     description: 'Artisanal champagne silk clutch embroidered with delicate pearl daisy motifs and handcrafted tassel pull.'
   },
   {
     id: 'prod-lumiere-bracelet',
-    title: 'Lumiere Bracelet',
+    title: 'Lumiere Pearl Bracelet',
     category: 'jewellery',
-    price: 35.00,
+    price: 2500,
+    priceFormatted: 'Rs. 2,500',
     image: 'assets/lumiere_bracelet.jpg',
-    contact: '+94 77 234 5678',
-    whatsapp: '94772345678',
+    contact: '0744156013',
+    whatsapp: '94744156013',
     tag: 'Handcrafted',
     isUserItem: false,
-    description: 'Triple-tier natural freshwater pearl bracelet accented with gold faceted rondelle spacers and signature charm.'
+    description: 'Triple-tier natural pearl bracelet accented with gold faceted rondelle spacers and signature charm.'
   },
   {
     id: 'prod-gift-set',
-    title: 'Aurelle Keepsake Box',
+    title: 'AVENZ Keepsake Gift Box',
     category: 'giftsets',
-    price: 165.00,
+    price: 12500,
+    priceFormatted: 'Rs. 12,500',
     image: 'assets/gift_sets.jpg',
-    contact: '+94 77 234 5678',
-    whatsapp: '94772345678',
+    contact: '0744156013',
+    whatsapp: '94744156013',
     tag: 'Gift Set',
     isUserItem: false,
     description: 'Curated luxury presentation box containing a matching pearl pouch and Lumiere bracelet tied with silk ribbon.'
@@ -284,7 +329,7 @@ class AurelleStore {
     if (newsletterForm) {
       newsletterForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        this.showToast('Thank you for subscribing to Aurelle Radiance!', 'success');
+        this.showToast('Thank you for subscribing to AVENZ!', 'success');
         newsletterForm.reset();
       });
     }
@@ -407,7 +452,7 @@ class AurelleStore {
     });
 
     this.renderCatalog();
-    this.showToast(`"${title}" has been successfully added to Aurelle!`, 'success');
+    this.showToast(`"${title}" has been successfully added to AVENZ!`, 'success');
 
     // Scroll to catalog
     const catalog = document.getElementById('catalog');
@@ -442,12 +487,14 @@ class AurelleStore {
     const whatsappBtn = document.getElementById('btn-order-whatsapp-direct');
     const callBtn = document.getElementById('btn-order-call-direct');
 
+    const displayPrice = product.priceFormatted || (product.price >= 50 ? `Rs. ${product.price.toLocaleString()}` : `$${product.price.toFixed(2)}`);
+
     if (thumb) thumb.src = product.image;
     if (title) title.textContent = product.title;
-    if (price) price.textContent = `$${product.price.toFixed(2)}`;
+    if (price) price.textContent = displayPrice;
     if (contactText) contactText.textContent = product.contact;
 
-    const message = encodeURIComponent(`Hello Aurelle! I would like to order "${product.title}" ($${product.price.toFixed(2)}). Please provide availability and payment/delivery details.`);
+    const message = encodeURIComponent(`Hello AVENZ! I would like to order "${product.title}" (${displayPrice}). Please provide availability and payment/delivery details.`);
     
     if (whatsappBtn) {
       whatsappBtn.href = `https://wa.me/${product.whatsapp}?text=${message}`;
@@ -466,7 +513,8 @@ class AurelleStore {
     const product = this.products.find(p => p.id === productId);
     if (!product) return;
 
-    const message = encodeURIComponent(`Hello Aurelle! I am interested in ordering "${product.title}" priced at $${product.price.toFixed(2)}. Could you share ordering details?`);
+    const displayPrice = product.priceFormatted || (product.price >= 50 ? `Rs. ${product.price.toLocaleString()}` : `$${product.price.toFixed(2)}`);
+    const message = encodeURIComponent(`Hello AVENZ! I am interested in ordering "${product.title}" priced at ${displayPrice}. Could you share ordering details?`);
     window.open(`https://wa.me/${product.whatsapp}?text=${message}`, '_blank');
   }
 
@@ -481,9 +529,10 @@ class AurelleStore {
     const customerNotes = document.getElementById('customer-notes').value.trim();
 
     const product = this.selectedProductForOrder;
+    const displayPrice = product.priceFormatted || (product.price >= 50 ? `Rs. ${product.price.toLocaleString()}` : `$${product.price.toFixed(2)}`);
 
-    let text = `*New Order Request - Aurelle*\n`;
-    text += `Item: ${product.title} ($${product.price.toFixed(2)})\n`;
+    let text = `*New Order Request - AVENZ*\n`;
+    text += `Item: ${product.title} (${displayPrice})\n`;
     text += `Customer Name: ${customerName}\n`;
     text += `Contact Number: ${customerPhone}\n`;
     if (customerAddress) text += `Delivery Address: ${customerAddress}\n`;
@@ -563,6 +612,7 @@ class AurelleStore {
     container.innerHTML = filtered.map(product => {
       const isWishlisted = this.wishlist.has(product.id);
       const categoryLabel = this.getCategoryLabel(product.category);
+      const displayPrice = product.priceFormatted || (product.price >= 50 ? `Rs. ${product.price.toLocaleString()}` : `$${product.price.toFixed(2)}`);
 
       return `
         <article class="product-card ${product.isUserItem ? 'is-user-item' : ''}" data-id="${product.id}">
@@ -588,7 +638,7 @@ class AurelleStore {
             <h3 class="product-title">${product.title}</h3>
             
             <div class="product-price-row">
-              <span class="product-price">$${product.price.toFixed(2)}</span>
+              <span class="product-price">${displayPrice}</span>
             </div>
 
             <div class="product-contact-badge" title="Order Contact Number">
@@ -618,6 +668,7 @@ class AurelleStore {
     const map = {
       'bags': 'Handcrafted Bags',
       'purses': 'Evening Purses',
+      'keytags': 'Butterfly Key Tags',
       'pouches': 'Embroidered Pouches',
       'jewellery': 'Artisan Jewellery',
       'giftsets': 'Curated Gift Sets'

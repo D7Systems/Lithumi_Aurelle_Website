@@ -1,5 +1,5 @@
 /* ==========================================================================
-   AURELLE LUXURY DESIGN SYSTEM
+   AVENZ LUXURY DESIGN SYSTEM
    Inspired by Haute Atelier Aesthetics, Alabaster Tones, and Golden Accents
    ========================================================================== */
 
@@ -499,8 +499,8 @@ input, textarea, select {
 
 .categories-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
 }
 
 .category-card {
