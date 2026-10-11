@@ -1,10 +1,4 @@
-/**
- * AVENZ - Luxury Handcrafted Accessories & Key Tags
- * "Beads That Carry Your Story"
- * Core Interactive Application Logic
- */
-
-// Default curated products matching AVENZ brand & collections
+// AVENZ Atelier Storefront Logic
 const DEFAULT_PRODUCTS = [
   {
     id: 'prod-avenz-bag-9000',
