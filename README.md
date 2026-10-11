@@ -15,3 +15,4 @@ E-commerce website for AVENZ Atelier, handcrafted accessories and bags brand.
 
 ## Author
 Designed and developed by [D7Systems](https://github.com/D7Systems).
+Lead Engineer: [@Desandu7000](https://github.com/Desandu7000).
