@@ -29,24 +29,8 @@ Lithumi_Aurelle_Website/
 ├── index.html               # Main semantic HTML5 markup
 ├── styles.css               # Luxury atelier design system & responsive styling
 ├── app.js                   # Client-side store logic, filtering & modals
-├── D7SYSTEMS_ORG_README.md  # Profile README template for the D7Systems GitHub Organization
 └── README.md                # Project documentation
 ```
-
----
-
-## 🚀 Getting Started
-
-To run the site locally:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/D7Systems/Lithumi_Aurelle_Website.git
-   ```
-2. Open `index.html` in any modern web browser, or serve using a local development server:
-   ```bash
-   npx serve .
-   ```
 
 ---
 
